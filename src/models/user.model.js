@@ -1,6 +1,4 @@
-const { HostAddress } = require('mongodb');
-const { mongo, default: mongoose } = require('mongoose');
-const mongoose = require('mongoose ');
+const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
     fullName:String,
@@ -23,7 +21,7 @@ const UserSchema = new mongoose.Schema({
              description:String,
              images:[]
         }],
-        HostAddresses:[
+    Addresses:[
             {
                 type:mongoose.Schema.Types.ObjectId,
                 ref:"Address",
@@ -31,6 +29,6 @@ const UserSchema = new mongoose.Schema({
         ],
 });
 
-const User = mongoose = mongoose.model("User", UserSchema)
+const User =  mongoose.model('User', UserSchema);
 
 module.exports = User;
